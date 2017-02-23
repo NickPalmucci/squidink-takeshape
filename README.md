@@ -61,5 +61,14 @@ routes:                       #Routes tell TS which template to join with which 
 ## Templating
 TS uses the Nunjucks templating language. You can find detailed documentation on the Nunjucks site: (https://mozilla.github.io/nunjucks/templating.html
 
+### TS specific Nunjucks Filters
+```
+route:        {{ contentObject | route(Sring) }}  #Renders the path to a contentObject using the key in the routes config object in tsg.yml. contentObject must have the necessary field specified in the route path in order to render.  
+md:           {{ bodyField | md }}  #Renders markdown using the CommonMark spec http://commonmark.org/ 
+numberFormat: {{ numberField | numberformat(formatSpecifierString: String) }}  #Renders a number formatted according to the the format specifier string https://github.com/d3/d3-format
+code:         {{ codeField | code(language: String }}  #Provides
+image:        {{ imageField.s3Key | image(Object) }}  #Returns an imgix ready url. Takes an object of keys and values for any imgix filter https://docs.imgix.com/apis/url  
+```
+
 ## Reach out
 If we can make your life easier we want to hear from you at [support@takeshape.io](mailto:support@takeshape.io)
