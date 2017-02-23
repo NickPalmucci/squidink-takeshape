@@ -1,0 +1,16 @@
+{% extends "pages/base.html" %}
+
+{% block title %}Hello World - home{% endblock %}
+
+{% block content %}
+  <h1>Hello {{ homepage.title }}</h1>
+  <h2>Featured Posts</h2>
+  <ul>
+    {% for post in homepage.featuredPosts %}
+      <li>
+        <img src="{{ post.image.s3Key | image({w: 100}) }}" />
+        <a href="{{ post | route('posts') }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

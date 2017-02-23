@@ -1,0 +1,19 @@
+query {
+  posts: getPostList {
+    _id
+    _version
+    _contentTypeId
+    _createdAt
+    _updatedAt
+    _enabled
+    _enabledAt
+    title
+    image {
+      s3Key
+    }
+    contentHtml
+    tags {
+      name
+    }
+  }
+}

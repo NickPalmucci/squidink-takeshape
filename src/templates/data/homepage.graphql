@@ -1,0 +1,12 @@
+query {
+  homepage: getHomepage {
+    title
+    contentHtml
+    featuredPosts {
+      title
+      image {
+        s3Key
+      }
+    }
+  }
+}

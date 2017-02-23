@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+<head>
+  <title>{% block title %}Hello World{% endblock %}</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/assets/{{ global.assets["stylesheets/main.css"] }}"/>
+</head>
+
+<body>
+{% block content %}{% endblock %}
+</div>
+<script src="/assets/{{ global.assets["javascripts/main.js"] }}"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{% extends "pages/base.html" %}
+
+{% block title %}Hello World - {{ post.title }}{% endblock %}
+
+{% block content %}
+  <h1>{{ post.title }}</h1>
+  <div class="image">
+    <img src="{{ post.image.s3Key | image({w: 300}) }}" />
+  </div>
+  <div class="content">
+    {{ post.contentHtml | safe }}
+  </div>
+  <h2>tags</h2>
+  <ul>
+    {% for tag in post.tags %}
+      <li><a href="{{ tag | route('tags') }}">{{ tag.name }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}
