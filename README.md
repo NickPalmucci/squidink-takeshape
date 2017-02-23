@@ -66,7 +66,7 @@ TS uses the Nunjucks templating language. You can find detailed documentation on
 route:        {{ contentObject | route(Sring) }}  #Renders the path to a contentObject using the key in the routes config object in tsg.yml. contentObject must have the necessary field specified in the route path in order to render.  
 md:           {{ bodyField | md }}  #Renders markdown using the CommonMark spec http://commonmark.org/ 
 numberFormat: {{ numberField | numberformat(formatSpecifierString: String) }}  #Renders a number formatted according to the the format specifier string https://github.com/d3/d3-format
-code:         {{ codeField | code(language: String }}  #Provides
+code:         {{ codeField | code(String }}  #Renders prism.js http://prismjs.com/ ready markup. Takes an optional langauge string (http://prismjs.com/#languages-list) You will need to manually include the corresponding CSS in your project. 
 image:        {{ imageField.s3Key | image(Object) }}  #Returns an imgix ready url. Takes an object of keys and values for any imgix filter https://docs.imgix.com/apis/url  
 ```
 
