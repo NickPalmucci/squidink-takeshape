@@ -58,7 +58,7 @@
     "style-loader": "^0.13.1",
     "stylelint": "^7.2.0",
     "stylelint-config-standard": "^13.0.0",
-    "takeshape-cli": "^1.5.1",
+    "takeshape-cli": "^1.6.0",
     "webpack": "^2.2.1",
     "webpack-manifest-plugin": "^1.1.0"
   },
