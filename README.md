@@ -30,7 +30,12 @@ Files and directories in this repo are designed to get you up and running with T
 ```
 templatePath: src/templates   #Sets the path to look for templates
 staticPath: static            #TS deploys this directory. All of your JS, CSS need to end up here. Files like robots.txt, humans.txt and other files that do not need processing should live here.
-buildPath: build              #Temporary build directory 
+buildPath: build              #Temporary build directory
+ 
+ locale: en-us #defaut
+ dates:
+   tz: America/New_York #default
+   format: LLL #default
 
 context:                      #Global context available to all routes. 
   assets: ../../static/assets/manifest.json
@@ -62,13 +67,40 @@ routes:                       #Routes tell TS which template to join with which 
 TS uses the Nunjucks templating language. You can find detailed documentation on the Nunjucks site: (https://mozilla.github.io/nunjucks/templating.html
 
 ### TS specific Nunjucks Filters
-```
-route:        {{ contentObject | route(Sring) }}  #Renders the path to a contentObject using the key in the routes config object in tsg.yml. contentObject must have the necessary field specified in the route path in order to render.  
-md:           {{ bodyField | md }}  #Renders markdown using the CommonMark spec http://commonmark.org/ 
-numberFormat: {{ numberField | numberformat(formatSpecifierString: String) }}  #Renders a number formatted according to the the format specifier string https://github.com/d3/d3-format
-code:         {{ codeField | code(String }}  #Renders prism.js http://prismjs.com/ ready markup. Takes an optional langauge string (http://prismjs.com/#languages-list) You will need to manually include the corresponding CSS in your project. 
-image:        {{ imageField.s3Key | image(Object) }}  #Returns an imgix ready url. Takes an object of keys and values for any imgix filter https://docs.imgix.com/apis/url  
-```
+- `route(routeName: String)`
+  ```
+  {{ post | route('posts') }}
+  ```
+  Returns a relative path to a piece of content as defined by the routes in `tsg.yml`. The input Object must have the necessary fields specified in the route path in order to construct the path properly.  
+- `md`
+  ```
+  {{ markdown | md }}
+  ```
+  Markdown to safe HTML using the CommonMark spec http://commonmark.org/   
+- `numberFormat(format: String)`
+  ```
+  {{ numberField | numberformat(',.2r') }}
+  # grouped thousands with two significant digits, 4200 -> "4,200"
+  ```
+  Returns a number formatted according to the the format specifier string https://github.com/d3/d3-format
+- `code(language: String)`
+  ```
+  {{ codeField | code('javascript') }}
+  ```
+  Uses [prism.js](http://prismjs.com/) to return an HTML representation of the highlighted code. Takes an optional [language string](http://prismjs.com/#languages-list). You will need to manually include the corresponding [CSS](https://github.com/PrismJS/prism/tree/gh-pages/themes) in your project. 
+- `image(params: Object)`
+  ```
+  {{ imageField | image({w: 320, h: 240, q: 90, crop: 'faces'}) }}
+  ```
+  Returns an imgix ready url. Takes an object of keys and values for any imgix filter https://docs.imgix.com/apis/url
+- `date(format: String|Object)`
+  ```
+  {{ date | date('MMM Do YYYY') }}
+  {{ date | date({format: 'MMM Do YYYY', tz: 'America/Los_Angeles') }}
+  {{ date | date({format: 'LLL', tz: 'America/Los_Angeles', locale: 'fr') }}
+  ```
+  Formats dates using [moment.js](https://momentjs.com/). `format` can be either a [format string](https://momentjs.com/docs/#/displaying/format/) or an object where you can specify a format and override the default timezone and locale (configured in `tsg.yml`).
+
 
 ## Reach out
 If we can make your life easier we want to hear from you at [support@takeshape.io](mailto:support@takeshape.io)
