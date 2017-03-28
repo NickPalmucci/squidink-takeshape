@@ -8,6 +8,13 @@ query {
     _enabled
     _enabledAt
     title
+    author {
+      name
+      biography
+      portrait {
+        s3Key
+      }
+    }
     image {
       s3Key
     }
