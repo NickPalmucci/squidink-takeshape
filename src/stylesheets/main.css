@@ -1,3 +1,19 @@
-body {
-  font-family: 'Arial', sans-serif;
+.gif {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0 3rem;
+}
+
+.logo {
+  height: 10rem;
+  width: 10rem;
+}
+
+html {
+  font-size: 10px;
 }
