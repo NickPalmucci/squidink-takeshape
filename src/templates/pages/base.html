@@ -1,14 +1,18 @@
 <!doctype html>
 <html>
 <head>
-  <title>{% block title %}Hello World{% endblock %}</title>
+  <title>{% block title %}Squid Ink{% endblock %}</title>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/normalize.css"/>
+  <link rel="stylesheet" href="/skeleton.css"/>
   <link rel="stylesheet" href="/assets/{{ global.assets["stylesheets/main.css"] }}"/>
 </head>
 
 <body>
 {% block content %}{% endblock %}
-</div>
-<script src="/assets/{{ global.assets["javascripts/main.js"] }}"></script>
 </body>
+<script src="/assets/{{ global.assets["javascripts/main.js"] }}">
 </html>

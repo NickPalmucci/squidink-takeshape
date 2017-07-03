@@ -1,16 +1,23 @@
 {% extends "pages/base.html" %}
 
-{% block title %}Hello World - home{% endblock %}
+{% block title %}Squid Ink{% endblock %}
 
 {% block content %}
-  <h1>Hello {{ homepage.title }}</h1>
-  <h2>Featured Posts</h2>
-  <ul>
-    {% for post in homepage.featuredPosts %}
-      <li>
-        <img src="{{ post.image.s3Key | image({w: 100}) }}" />
-        <a href="{{ post | route('posts') }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
+<div>
+  <div class="logoContainer">
+    <img src="{{gifGallery.logo | image({w:100, h: 100}) }}" class="logo">
+  </div>
+  <div>
+    <div class="twelve columns">
+      {% for gifs in gifGallery.gif %}
+      <div class="row gif">
+        <img src="{{ gifs.image.s3Key | image({w: 400, h: 400}) }}" class='eight columns offset-by-two'/>
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+
+</div>
+
 {% endblock %}
