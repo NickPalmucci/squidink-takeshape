@@ -1,12 +1,12 @@
 query {
-  homepage: getHomepage {
-    title
-    contentHtml
-    featuredPosts {
-      title
+  gifGallery: getGifGallery {
+    gif {
       image {
         s3Key
       }
+    }
+    logo {
+      s3Key
     }
   }
 }
