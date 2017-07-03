@@ -10,19 +10,3 @@ routes:
     path: /
     template: pages/homepage.html
     context: data/homepage.graphql
-
-  posts:
-    path: /posts/:title
-    template: pages/post.html
-    context: data/posts.graphql
-    paginate:
-      property: posts
-      itemName: post
-
-  tags:
-     path: /tags/:name
-     template: pages/tag.html
-     context: data/tags.graphql
-     paginate:
-       property: tags
-       itemName: tag
