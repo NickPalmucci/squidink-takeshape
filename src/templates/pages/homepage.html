@@ -3,21 +3,33 @@
 {% block title %}Squid Ink{% endblock %}
 
 {% block content %}
-<div>
-  <div class="logoContainer">
-    <img src="{{gifGallery.logo | image({w:100, h: 100}) }}" class="logo">
+
+<div class="logoContainer">
+  <img src="{{gifGallery.logo | image({w:100, h: 100}) }}" class="logo">
+  <div class="logoMenu">
+    <span>Photos</span>
+    <span>Recepies</span>
+    <span>Videos</span>
   </div>
-  <div>
+</div>
+<div class="sideMenu">
+  <div class="sideLogoContainer">
+    <div class="sideLogo logo" style="background-image: url({{gifGallery.logo | image({w:100, h: 100}) }});"></div>
+    <div class="sideLogoMenu">
+      <span>Photos</span>
+      <span>Recepies</span>
+      <span>Videos</span>
+    </div>
+  </div>
+</div>
+  <div class="">
     <div class="twelve columns">
       {% for gifs in gifGallery.gif %}
       <div class="row gif">
-        <img src="{{ gifs.image.s3Key | image({w: 400, h: 400}) }}" class='eight columns offset-by-two'/>
+        <img src="{{ gifs.image.s3Key | image({w: 600, h: 600}) }}" class='eight columns offset-by-two'/>
       </div>
       {% endfor %}
-
     </div>
   </div>
-
-</div>
 
 {% endblock %}
