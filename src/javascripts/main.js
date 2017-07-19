@@ -1,1 +1,2 @@
-console.log('WOO JS is working')
+import './scroll';
+import './nav';
