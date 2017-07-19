@@ -1,0 +1,56 @@
+.sideMenu {
+  padding-left: 2rem;
+  margin-top: 1rem;
+  overflow: hidden;
+  height: 0;
+  top: 1rem;
+}
+
+.displayMenu {
+  height: 30rem;
+}
+
+.sideLogoContainer {
+  position: relative;
+  left: -200px;
+  transition: left ease 1s;
+}
+
+.sideLogoActive {
+  left: 0;
+  margin-left: 2rem;
+}
+
+.sideLogo {
+  border-radius: 50%;
+  background-color: black;
+  background-size: cover;
+  height: 100px;
+  width: 100px;
+}
+
+.sideLogoMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  opacity: 0;
+  transition: opacity ease 1s;
+  margin-top: 1rem;
+}
+
+.sideLogoMenu > span {
+  font-family: 'Biryani', sans-serif;
+  font-size: 1.8rem;
+  padding: 1rem 2rem;
+}
+
+.sideLogoMenu > span:hover {
+  color: rgb(250, 1, 176);
+}
+
+.superSide.activeSide {
+  opacity: 1;
+  height: 200px;
+  color: black;
+}

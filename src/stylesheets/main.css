@@ -1,3 +1,8 @@
+@import './normalize.css';
+@import './skeleton.css';
+@import './topMenu.css';
+@import './sideMenu.css';
+
 .gif {
   width: 100%;
   margin-bottom: 1rem;
@@ -5,11 +10,20 @@
 
 .logoContainer {
   display: flex;
-  justify-content: center;
-  margin: 1rem 0 3rem;
+  flex-direction: column;
+  margin: 1rem 0;
+  align-items: center;
 }
 
 .logo {
-  height: 10rem;
-  width: 10rem;
+  align-self: center;
+  cursor: pointer;
+}
+
+.scrollmagic-pin-spacer {
+  z-index: -99;
+}
+
+.freePin {
+  z-index: 99;
 }

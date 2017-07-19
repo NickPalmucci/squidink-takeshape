@@ -1,0 +1,30 @@
+.logoMenu {
+  visibility: hidden;
+  position: relative;
+  margin-top: 2.5rem;
+  color: white;
+  height: 0;
+  transition: height ease 1s;
+}
+
+.logoMenu > span {
+  padding: 1rem 2rem 0 1rem;
+  font-family: 'Biryani', sans-serif;
+  font-size: 2rem;
+  opacity: 0;
+  transition: opacity ease 1s;
+}
+
+.logoMenu > span:hover {
+  color: rgb(250, 1, 176);
+}
+
+.activeTop {
+  visibility: visible;
+  height: 60px;
+  color: black;
+}
+
+.activeTop > span {
+  opacity: 1;
+}
