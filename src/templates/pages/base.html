@@ -1,18 +1,29 @@
 <!doctype html>
 <html>
-  <head>
-    <title>{% block title %}Squid Ink{% endblock %}</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Biryani" rel="stylesheet">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/assets/{{ global.assets["stylesheets/main.css"] }}"/>
-  </head>
+<head>
+  <title>{% block title %}Squid Ink{% endblock %}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" >
+  <link href="https://fonts.googleapis.com/css?family=Biryani" rel="stylesheet">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/assets/{{ global.assets["stylesheets/main.css"] }}"/>
+</head>
 
-  <body>
-  {% block content %}{% endblock %}
-  </body>
-
-  <script src="/assets/{{ global.assets["javascripts/main.js"] }}"></script>
-  </html>
+<body>
+<div class="mbMenu" >
+  <div class="mbSlider">
+    <div class="mbClose">
+      <h1>X</h1>
+    </div>
+    <div class="mbLinks">
+      <p>Photos</p>
+      <p>SquidInk</p>
+      <p>Videos</p>
+    </div>
+  </div>
+</div>
+{% block content %}{% endblock %}
+</body>
+<script src="/assets/{{ global.assets["javascripts/main.js"] }}"></script>
+</html>
