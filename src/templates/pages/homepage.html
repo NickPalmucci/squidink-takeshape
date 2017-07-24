@@ -7,23 +7,27 @@
 <div class="logoContainer">
   <img src="{{gifGallery.logo | image({w:100, h: 100}) }}" class="logo">
   <div class="logoMenu">
-    <span>Photos</span>
-    <span>Recepies</span>
-    <span>Videos</span>
+    <h1>Photos</h1>
+    <h1>Videos</h1>
+    <h1>Squid</h1>
   </div>
 </div>
 <div class="sideMenu">
   <div class="sideLogoContainer">
     <div class="sideLogo logo" style="background-image: url({{gifGallery.logo | image({w:100, h: 100}) }});"></div>
     <div class="sideLogoMenu">
-      <span>Photos</span>
-      <span>Recepies</span>
-      <span>Videos</span>
+      <h1>Photos</h1>
+      <h1>Videos</h1>
+      <h1>Ink</h1>
     </div>
   </div>
 </div>
+<div class="mbSide">
+  <img src="{{gifGallery.logo | image({w:50, h: 50}) }}" class="mbLogo">
+</div>
   <div class="">
     <div class="twelve columns">
+      <div id="trigger"></div>
       {% for gifs in gifGallery.gif %}
       <div class="row gif">
         <img src="{{ gifs.image.s3Key | image({w: 600, h: 600}) }}" class='eight columns offset-by-two'/>
