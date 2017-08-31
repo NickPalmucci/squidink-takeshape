@@ -1,0 +1,14 @@
+query {
+  photos: getPhotos {
+    photoList {
+    photo {
+      s3Key
+      }
+    }
+  }
+    gifGallery: getGifGallery {
+    logo {
+      s3Key
+    }
+  }
+}
