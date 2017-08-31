@@ -1,0 +1,10 @@
+query {
+  videos: getVideo {
+    blockCanvas
+  }
+    gifGallery: getGifGallery {
+    logo {
+      s3Key
+    }
+  }
+}
