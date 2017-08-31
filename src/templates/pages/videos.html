@@ -1,0 +1,27 @@
+{% extends "pages/base.html" %}
+
+{% block content %}
+
+{% include "pages/navs/topNav.html" %}
+
+{% include "pages/navs/sideNav.html" %}
+
+<div class="mbSide">
+  <img src="{{gifGallery.logo | image({w:50, h: 50}) }}" class="mbLogo">
+</div>
+
+  <div class="twelve columns">
+    <div id="trigger"></div>
+    <div class="row">
+      <div class="eight columns offset-by-two">
+        {% include "pages/svg/videos.svg" %}
+      </div>
+    </div>
+
+    <div class="row">
+      <iframe class="eight columns offset-by-two" src="https://player.vimeo.com/video/215105727" width="640" height="360" frameborder="0" title="The Lords Mind" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+
+  </div>
+
+{% endblock %}
