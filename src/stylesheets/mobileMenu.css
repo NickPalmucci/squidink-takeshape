@@ -27,7 +27,7 @@
     display: block;
     position: fixed;
     height: 100%;
-    width: 80%;
+    width: 60%;
     left: -90%;
     background-color: lightgray;
     transition: left ease 1s;
@@ -39,6 +39,7 @@
   }
 
   .mbClose {
+    font-size: 2rem;
     height: 2rem;
     width: 2rem;
     float: right;
@@ -47,7 +48,9 @@
   }
 
   .mbLinks {
+    display: flex;
+    flex-direction: column;
     font-size: 3rem;
-    padding-left: 1rem;
+    padding: 2rem 0 0 2rem;
   }
 }
