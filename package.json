@@ -24,7 +24,7 @@
     "lint:js": "eslint src/javascripts",
     "lint:css": "stylelint src/stylesheets/**/*.scss --syntax scss",
     "lint": "npm-run-all -p lint:*",
-    "serve": "browser-sync start --https --server build --port 5000 --files 'build/**/*, !build/sitemap.xml, !build/feed.xml' --reload-debounce",
+    "serve": "browser-sync start --http --server 'build' --port 5000 --files 'build/**/*, !build/sitemap.xml, !build/feed.xml' --reload-debounce",
     "tsg:build": "tsg build",
     "build:webpack": "cross-env NODE_ENV=production webpack --display-error-details -p",
     "build:webpack:dev": "webpack --display-error-details -d",
@@ -63,6 +63,7 @@
     "webpack-manifest-plugin": "^1.1.0"
   },
   "dependencies": {
-    "lost": "^8.0.0"
+    "lost": "^8.0.0",
+    "scrollmagic": "^2.0.5"
   }
 }
