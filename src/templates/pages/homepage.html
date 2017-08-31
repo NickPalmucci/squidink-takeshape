@@ -1,31 +1,16 @@
 {% extends "pages/base.html" %}
 
-{% block title %}Squid Ink{% endblock %}
-
 {% block content %}
 
-<div class="logoContainer">
-  <img src="{{gifGallery.logo | image({w:100, h: 100}) }}" class="logo">
-  <div class="logoMenu">
-    <h1>Photos</h1>
-    <h1>Videos</h1>
-    <h1>Squid</h1>
-  </div>
-</div>
-<div class="sideMenu">
-  <div class="sideLogoContainer">
-    <div class="sideLogo logo" style="background-image: url({{gifGallery.logo | image({w:100, h: 100}) }});"></div>
-    <div class="sideLogoMenu">
-      <h1>Photos</h1>
-      <h1>Videos</h1>
-      <h1>Ink</h1>
-    </div>
-  </div>
-</div>
+{% include "pages/navs/topNav.html" %}
+
+{% include "pages/navs/sideNav.html" %}
+
 <div class="mbSide">
   <img src="{{gifGallery.logo | image({w:50, h: 50}) }}" class="mbLogo">
 </div>
-  <div class="">
+
+  <div>
     <div class="twelve columns">
       <div id="trigger"></div>
       {% for gifs in gifGallery.gif %}
