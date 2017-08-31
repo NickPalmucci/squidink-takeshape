@@ -10,3 +10,13 @@ routes:
     path: /
     template: pages/homepage.html
     context: data/homepage.graphql
+
+  videos:
+    path: /videos
+    template: pages/videos.html
+    context: data/videos.graphql
+
+  photos:
+    path: /photos
+    template: pages/photos.html
+    context: data/photos.graphql
