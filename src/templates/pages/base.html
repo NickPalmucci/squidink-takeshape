@@ -11,18 +11,7 @@
 </head>
 
 <body>
-<div class="mbMenu" >
-  <div class="mbSlider">
-    <div class="mbClose">
-      <h1>X</h1>
-    </div>
-    <div class="mbLinks">
-      <p>Photos</p>
-      <p>SquidInk</p>
-      <p>Videos</p>
-    </div>
-  </div>
-</div>
+{% include "pages/navs/mbNav.html" %}
 {% block content %}{% endblock %}
 </body>
 <script src="/assets/{{ global.assets["javascripts/main.js"] }}"></script>
