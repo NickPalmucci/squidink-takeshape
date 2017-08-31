@@ -1,0 +1,24 @@
+{% extends "pages/base.html" %}
+
+{% block content %}
+
+{% include "pages/navs/topNav.html" %}
+
+{% include "pages/navs/sideNav.html" %}
+
+<div class="mbSide">
+  <img src="{{gifGallery.logo | image({w:50, h: 50}) }}" class="mbLogo">
+</div>
+
+<div class="twelve columns">
+  <div id="trigger"></div>
+
+  {% for photos in photos.photoList %}
+  <div class="row gif">
+    <img src="{{ photos.photo.s3Key | image({w: 600, h: 600}) }}" class='eight columns offset-by-two'/>
+  </div>
+  {% endfor %}
+
+</div>
+
+{% endblock %}
