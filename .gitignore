@@ -14,13 +14,17 @@ results
 
 npm-debug.log
 node_modules
+yarn.lock
 
+.gitignore
 .graphqlrc
 .tsgrc
 .idea
 .githubtoken
 .jekyll-metadata
-.idea
+graphql.config.json
+graphql.schema.json
 
 /vendor
 /build
+.eslintignore
