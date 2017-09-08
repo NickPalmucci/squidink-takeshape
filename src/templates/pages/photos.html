@@ -15,7 +15,7 @@
 
   {% for photos in photos.photoList %}
   <div class="row gif">
-    <img src="{{ photos.photo.s3Key | image({w: 600, h: 600}) }}" class='eight columns offset-by-two'/>
+    <img src="{{ photos.photo.s3Key | image({w: 800, h: 800}) }}" class='eight columns offset-by-two'/>
   </div>
   {% endfor %}
 
