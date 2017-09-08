@@ -20,3 +20,8 @@ routes:
     path: /photos
     template: pages/photos.html
     context: data/photos.graphql
+
+  shop:
+    path: /shop
+    template: pages/shop.html
+    context: data/shop.graphql
