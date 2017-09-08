@@ -1,0 +1,12 @@
+query {
+  shop: getShop {
+    asset {
+      s3Key
+    }
+  }
+  gifGallery: getGifGallery {
+    logo {
+      s3Key
+    }
+  }
+}
