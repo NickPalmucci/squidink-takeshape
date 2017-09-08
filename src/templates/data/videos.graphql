@@ -1,8 +1,5 @@
 query {
-  videos: getVideo {
-    blockCanvas
-  }
-    gifGallery: getGifGallery {
+   gifGallery: getGifGallery {
     logo {
       s3Key
     }
