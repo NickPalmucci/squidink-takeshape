@@ -1,0 +1,22 @@
+{% extends "pages/base.html" %}
+
+{% block content %}
+
+{% include "pages/navs/topNav.html" %}
+
+{% include "pages/navs/sideNav.html" %}
+
+<div class="mbSide">
+  <img src="{{gifGallery.logo | image({w:50, h: 50}) }}" class="mbLogo">
+</div>
+
+<div class="twelve columns">
+  <div id="trigger"></div>
+
+  <div class="row">
+    <img class="four columns offset-by-four" src="{{ shop.asset.s3Key | image({w: 500, h: 500}) }}"/>
+  </div>
+
+</div>
+
+{% endblock %}
