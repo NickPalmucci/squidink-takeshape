@@ -8,6 +8,7 @@
 
 .displayMenu {
   height: 30rem;
+  overflow: visible;
 }
 
 .sideLogoContainer {
