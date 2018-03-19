@@ -10,9 +10,12 @@
   <link rel="stylesheet" href="/assets/{{ global.assets["stylesheets/main.css"] }}"/>
 </head>
 
-<body>
-{% include "pages/navs/mbNav.html" %}
-{% block content %}{% endblock %}
-</body>
-<script src="/assets/{{ global.assets["javascripts/main.js"] }}"></script>
+  <body>
+  {% include "pages/navs/mbNav.html" %}
+
+  {% include "pages/svg/squidink_logo.svg" %}
+
+  {% block content %}{% endblock %}
+  </body>
+    <script src="/assets/{{ global.assets["javascripts/main.js"] }}"></script>
 </html>
