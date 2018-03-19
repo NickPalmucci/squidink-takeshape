@@ -18,6 +18,7 @@
   "engines": {
     "node": ">= 4.0.0"
   },
+  "eslintConfig": "./.eslintrc",
   "scripts": {
     "init": "tsg init",
     "clean": "rimraf static/assets/javascripts && rimraf static/assets/stylesheets && rimraf static/assets/*.json",
