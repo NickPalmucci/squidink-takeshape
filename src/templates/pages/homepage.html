@@ -6,19 +6,13 @@
 
 {% include "pages/navs/sideNav.html" %}
 
-<div class="mbSide">
-  <img src="{{gifGallery.logo | image({w:50, h: 50}) }}" class="mbLogo">
-</div>
-
-  <div>
     <div class="twelve columns">
       <div id="trigger"></div>
       {% for gifs in gifGallery.gif %}
       <div class="row gif">
-        <img src="{{ gifs.image.s3Key | image({w: 600, h: 600}) }}" class='eight columns offset-by-two'/>
+        <img src="{{ gifs.image.s3Key | image({w: 300, h: 300}) }}" class='eight columns offset-by-two'/>
       </div>
       {% endfor %}
     </div>
-  </div>
 
 {% endblock %}
