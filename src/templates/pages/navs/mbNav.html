@@ -1,21 +1,26 @@
 <div class="mbMenu" >
   <div class="mbSlider">
-    <div class="mbClose">X</div>
+    <div class="mbClose">
+      {% include "pages/svg/close.svg" %}
+    </div>
     <div class="mbLinks">
 
       <a href="/">
-        <img src="{{gifGallery.logo | image({w:100, h: 100}) }}" class="logo">
+        {% include "pages/svg/gifs.svg" %}
       </a>
 
-      <a href="/photos">
-        {% include "pages/svg/photos.svg" %}
+      <a href="/friends">
+        {% include "pages/svg/friends.svg" %}
       </a>
 
       <a href="/videos">
         {% include "pages/svg/videos.svg" %}
       </a>
 
-      {% include "pages/svg/shop.svg" %}
+      <a href="/shop">
+        {% include "pages/svg/shop.svg" %}
+      </a>
+
     </div>
   </div>
 </div>
