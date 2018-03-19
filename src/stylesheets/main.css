@@ -4,12 +4,6 @@
 @import './sideMenu.css';
 @import './mobileMenu.css';
 
-@media (max-width: 550px) {
-  .sideMenu {
-    display: none;
-  }
-}
-
 .gif {
   width: 100%;
   margin-bottom: 1rem;
@@ -40,4 +34,36 @@
 #trigger {
   position: absolute;
   top: 75%;
+}
+
+a {
+  text-decoration: none;
+}
+
+svg:hover {
+  fill: deeppink;
+}
+
+.mbSide > svg:hover {
+  fill: black;
+}
+
+.videoCont p {
+  display: none;
+}
+
+.oembed {
+  height: 36em !important;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 580px) {
+  .oembed {
+    height: 19em !important;
+  }
+}
+
+.iframe {
+  height: 100% !important;
+  width: 100% !important;
 }

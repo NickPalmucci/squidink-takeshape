@@ -1,3 +1,12 @@
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+  .sideMenu {
+    display: none;
+  }
+}
+
 .sideMenu {
   padding-left: 2rem;
   margin-top: 1rem;
@@ -15,6 +24,10 @@
   position: relative;
   left: -20rem;
   transition: left ease 1s;
+}
+
+.sideLogoContainer a {
+  height: 6rem;
 }
 
 .sideLogoActive {
@@ -38,22 +51,16 @@
   margin-top: 1rem;
 }
 
-.sideLogoMenu > h1 {
-  font-family: 'Biryani', sans-serif;
-  font-size: 1.8rem;
-  padding: 1rem 2rem;
-}
-
 @media (min-width: 2500px) {
-  .sideLogoMenu > h1 {
-    font-family: 'Biryani', sans-serif;
-    font-size: 4.8rem;
-    padding: 1rem 2rem;
+  .sideLogoMenu > a > svg {
+    height: 10rem;
+    width: 12rem;
   }
 }
 
-.sideLogoMenu > h1:hover {
-  color: rgb(250, 1, 176);
+.superSide {
+  margin-top: 3rem;
+  left: -1rem;
 }
 
 .superSide.activeSide {

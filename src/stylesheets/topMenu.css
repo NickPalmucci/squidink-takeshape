@@ -10,18 +10,10 @@
 }
 
 @media (min-width: 2500px) {
-  .logoMenu > h1 {
-    display: inline-block;
-    padding: 1rem 2rem 0 1rem;
-    font-family: 'Biryani', sans-serif;
-    font-size: 5rem;
-    opacity: 0;
-    transition: opacity ease 1s;
+  .logoMenu > a > svg {
+    height: 10rem;
+    width: 12rem;
   }
-}
-
-.logoMenu > h1:hover {
-  color: rgb(250, 1, 176);
 }
 
 .activeTop {
