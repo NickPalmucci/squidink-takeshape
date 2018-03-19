@@ -18,21 +18,13 @@ const handleSide = () => {
 
 const handleMobile = () => {
   const mbMenu = document.getElementsByClassName('mbMenu')[0];
-  const mbLogo = document.getElementsByClassName('mbLogo')[0];
-  const mbSide = document.getElementsByClassName('mbSide')[0];
 
-  if (mbMenu.classList.value.indexOf('Active') !== -1) {
+  if (mbMenu.classList.value.indexOf('Active') > 0) {
     mbMenu.classList.remove('mbMenuActive');
   } else {
     mbMenu.classList.add('mbMenuActive');
   }
 
-  if (mbLogo.classList.value.indexOf('Active') === -1) {
-    mbLogo.classList.add('mbLogoActive');
-    mbSide.style.top = '2rem';
-  } else {
-    mbLogo.classList.remove('mbLogoActive');
-  }
 };
 
 const setListener = () => {
