@@ -12,19 +12,24 @@ pids
 logs
 results
 
+src/templates/pages/svg
+
 npm-debug.log
 node_modules
 yarn.lock
 
 .gitignore
 .graphqlrc
+.graphqlconfig
 .tsgrc
 .idea
 .githubtoken
 .jekyll-metadata
 graphql.config.json
 graphql.schema.json
+tsg-project.graphql
 
 /vendor
 /build
 .eslintignore
+plans.txt
