@@ -8,9 +8,13 @@
 
     <div class="twelve columns">
       <div id="trigger"></div>
+      <div id="trigger2"></div>
       {% for gifs in gifGallery.gif %}
       <div class="row gif">
-        <img src="{{ gifs.image.s3Key | image({w: 300, h: 300}) }}" class='eight columns offset-by-two'/>
+        <img data-src="{{ gifs.image.s3Key | image({w: 500, h: 500}) }}"
+             class="eight columns offset-by-two lazyload"
+             onerror="this.style.display='none'"
+        />
       </div>
       {% endfor %}
     </div>

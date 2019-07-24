@@ -3,6 +3,9 @@ query {
     asset {
       s3Key
     }
+    print1 {
+      s3Key
+    }
   }
   gifGallery: getGifGallery {
     logo {

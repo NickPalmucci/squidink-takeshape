@@ -4,4 +4,10 @@ query {
       s3Key
     }
   }
+  videoHtml: getVideo {
+    repeater {
+      blockCanvasHtml
+    }
+  }
+
 }
