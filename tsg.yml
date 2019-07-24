@@ -16,8 +16,8 @@ routes:
     template: pages/videos.html
     context: data/videos.graphql
 
-  photos:
-    path: /photos
+  friends:
+    path: /friends
     template: pages/photos.html
     context: data/photos.graphql
 
