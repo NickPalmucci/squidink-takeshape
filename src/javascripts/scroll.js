@@ -1,41 +1,46 @@
 import ScrollMagic from 'scrollmagic';
 
-const controller = new ScrollMagic.Controller();
+window.onload = () => {
+  const controller = new ScrollMagic.Controller();
 
-new ScrollMagic.Scene({duration: 0})
-  .setPin('.sideMenu')
-  .addTo(controller);
+  new ScrollMagic.Scene({duration: 0})
+    .setPin('.sideMenu')
+    .addTo(controller);
 
-new ScrollMagic.Scene({duration: 0})
-  .setPin('.mbSide')
-  .addTo(controller);
+  new ScrollMagic.Scene({duration: 0})
+    .setPin('.mbSide')
+    .addTo(controller);
 
-const sceneOne = new ScrollMagic.Scene({triggerElement: '#trigger'})
-  .setClassToggle('.sideMenu', 'displayMenu')
-  .addTo(controller);
+  const sceneOne = new ScrollMagic.Scene({triggerElement: '#trigger'})
+    .setClassToggle('.sideMenu', 'displayMenu')
+    .addTo(controller);
 
-sceneOne.on('enter', () => {
-  const sideMenu = document.getElementsByClassName('sideMenu')[0];
-  sideMenu.style.top = '2rem';
-});
+  sceneOne.on('enter', () => {
+    const sideMenu = document.getElementsByClassName('sideMenu')[0];
 
-const sceneTwo = new ScrollMagic.Scene({triggerElement: '#trigger'})
-  .setClassToggle('.mbLogo', 'mbLogoActive')
-  .addTo(controller);
+    sideMenu.style.top = '2rem';
+  });
 
-sceneTwo.on('enter', () => {
-  const mbMenu = document.getElementsByClassName('mbSide')[0];
-  mbMenu.style.top = '2rem';
-});
+  const sceneTwo = new ScrollMagic.Scene({triggerElement: '#trigger2'}).addTo(controller);
 
-new ScrollMagic.Scene({triggerElement: '#trigger'})
-  .setClassToggle('.sideLogoContainer', 'sideLogoActive')
-  .addTo(controller);
+  sceneTwo.setClassToggle('.mbLogo', 'mbLogoActive');
 
-new ScrollMagic.Scene({triggerElement: '#trigger'})
-  .setClassToggle('.sideLogoMenu', 'superSide')
-  .addTo(controller);
+  sceneTwo.on('enter', () => {
+    const mbMenu = document.getElementsByClassName('mbSide')[0];
+    const mblogo = document.getElementsByClassName('mbLogo')[0];
 
-new ScrollMagic.Scene({triggerElement: '#trigger'})
-  .setClassToggle('.scrollmagic-pin-spacer', 'freePin')
-  .addTo(controller);
+    mbMenu.style.top = '2rem';
+  });
+
+  new ScrollMagic.Scene({triggerElement: '#trigger'})
+    .setClassToggle('.sideLogoContainer', 'sideLogoActive')
+    .addTo(controller);
+
+  new ScrollMagic.Scene({triggerElement: '#trigger'})
+    .setClassToggle('.sideLogoMenu', 'superSide')
+    .addTo(controller);
+
+  new ScrollMagic.Scene({triggerElement: '#trigger'})
+    .setClassToggle('.scrollmagic-pin-spacer', 'freePin')
+    .addTo(controller);
+};

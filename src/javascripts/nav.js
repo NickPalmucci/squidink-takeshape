@@ -1,7 +1,7 @@
 const handleTop = () => {
   const topMenu = document.getElementsByClassName('logoMenu')[0];
 
-  if (topMenu.classList.value.indexOf('active') !== -1) {
+  if (topMenu.classList.contains('activeTop')) {
     return topMenu.classList.remove('activeTop');
   }
   topMenu.classList.add('activeTop');
@@ -10,7 +10,7 @@ const handleTop = () => {
 const handleSide = () => {
   const sideMenu = document.getElementsByClassName('sideLogoMenu')[0];
 
-  if (sideMenu.classList.value.indexOf('active') !== -1) {
+  if (sideMenu.classList.contains('activeSide')) {
     return sideMenu.classList.remove('activeSide');
   }
   sideMenu.classList.add('activeSide');
@@ -19,12 +19,11 @@ const handleSide = () => {
 const handleMobile = () => {
   const mbMenu = document.getElementsByClassName('mbMenu')[0];
 
-  if (mbMenu.classList.value.indexOf('Active') > 0) {
+  if (mbMenu.classList.contains('mbMenuActive')) {
     mbMenu.classList.remove('mbMenuActive');
   } else {
     mbMenu.classList.add('mbMenuActive');
   }
-
 };
 
 const setListener = () => {
