@@ -7,14 +7,46 @@
 {% include "pages/navs/sideNav.html" %}
 
 <!--<div class="mbSide">-->
-  <!--<img src="{{gifGallery.logo | image({w:50, h: 50}) }}" class="mbLogo">-->
+<!--<img src="{{gifGallery.logo | image({w:50, h: 50}) }}" class="mbLogo">-->
 <!--</div>-->
 
-<div class="twelve columns">
+<!--11" X 17" poster size-->
+
+<div class="">
   <div id="trigger"></div>
 
-  <div class="row">
-    <img class="four columns offset-by-four" src="{{ shop.asset.s3Key | image({w: 500, h: 500}) }}"/>
+  <div class="row shopViz">
+    <img class="six columns offset-by-two shopImg" src="{{ shop.print1.s3Key | image({h: 1200, w: 1200}) }}" style="margin-right: 1rem"/>
+
+    <div class="three columns">
+
+
+      <div class="shopCont">
+        <div class="shopText">P.FARO</div>
+        <div class="shopText2">NO ANALOG COMMUNITY</div>
+
+        <div class="shopDet">
+          <div>Giclée Print, Matte 230 gsm</div>
+          <div>Signed and numbered by Artist</div>
+          <div>Size 11" x 17"</div>
+          <div>Edition: 50</div>
+          <div>Free shipping within NYC</div>
+          <div>$50.00</div>
+        </div>
+      </div>
+
+
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+        <input class="buyBtn shopImg" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <img class="shopImg" alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+      </form>
+
+
+    </div>
+
+
   </div>
 
 </div>
