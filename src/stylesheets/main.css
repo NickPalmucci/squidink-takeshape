@@ -4,7 +4,15 @@
 @import './sideMenu.css';
 @import './mobileMenu.css';
 
+@font-face {
+  font-family: 'Arial';
+  src: url('Arial.ttf.svg#Arial') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .gif {
+  min-height: 100px;
   width: 100%;
   margin-bottom: 1rem;
 }
@@ -19,8 +27,8 @@
 .logo {
   align-self: center;
   cursor: pointer;
-  height: 10rem;
-  width: 10rem;
+  height: 15rem;
+  width: 15rem;
 }
 
 .scrollmagic-pin-spacer {
@@ -32,6 +40,11 @@
 }
 
 #trigger {
+  position: absolute;
+  top: 75%;
+}
+
+#trigger2 {
   position: absolute;
   top: 75%;
 }
@@ -66,4 +79,53 @@ svg:hover {
 .iframe {
   height: 100% !important;
   width: 100% !important;
+}
+
+.shopViz {
+  visibility: hidden;
+}
+
+.shopCont {
+  padding-top: 14rem;
+}
+
+@media screen and (max-width: 580px) {
+  .shopCont {
+    padding-top: 8rem;
+  }
+}
+
+.shopText {
+  font-family: 'Arial';
+  font-size: 16pt;
+  font-weight: 800;
+}
+
+.buyBtn {
+  height: 3rem;
+}
+
+.shopText2 {
+  font-family: 'Arial';
+  font-size: 16pt;
+  font-weight: normal;
+  white-space: nowrap;
+  overflow: visible;
+}
+
+.shopDet {
+  margin: 2rem 0 2rem;
+}
+
+.shopDet div {
+  font-family: 'Arial';
+  font-size: 13pt;
+  font-weight: normal;
+}
+
+@media screen and (min-width: 2600px) {
+  .shopText {font-size: 6rem;}
+  .shopText2 {font-size: 6rem;}
+  .shopDet div {font-size: 6rem;}
+  .shopCont {padding-top: 18rem;}
 }
