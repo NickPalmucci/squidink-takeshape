@@ -3,6 +3,7 @@
 @import './topMenu.css';
 @import './sideMenu.css';
 @import './mobileMenu.css';
+@import './store.css';
 
 @font-face {
   font-family: 'Arial';
@@ -81,51 +82,43 @@ svg:hover {
   width: 100% !important;
 }
 
-.shopViz {
-  visibility: hidden;
+/*.shopViz {*/
+  /*visibility: hidden;*/
+/*}*/
+
+
+@media screen and (min-width: 2600px) {
+  .storeSmall {font-size: 4rem}
 }
 
-.shopCont {
-  padding-top: 14rem;
-}
 
 @media screen and (max-width: 580px) {
   .shopCont {
-    padding-top: 8rem;
+
   }
-}
 
-.shopText {
-  font-family: 'Arial';
-  font-size: 16pt;
-  font-weight: 800;
-}
+  .storeBig {
 
-.buyBtn {
-  height: 3rem;
-}
+  }
 
-.shopText2 {
-  font-family: 'Arial';
-  font-size: 16pt;
-  font-weight: normal;
-  white-space: nowrap;
-  overflow: visible;
-}
+  .storeSmallImg {
+    display: none;
+  }
 
-.shopDet {
-  margin: 2rem 0 2rem;
-}
+  .storeContainer {
+    display: flex;
+    flex-direction: column;
+  }
 
-.shopDet div {
-  font-family: 'Arial';
-  font-size: 13pt;
-  font-weight: normal;
-}
+  .storeSmall {
+    padding: 2rem 8rem 1rem !important;
+  }
 
-@media screen and (min-width: 2600px) {
-  .shopText {font-size: 6rem;}
-  .shopText2 {font-size: 6rem;}
-  .shopDet div {font-size: 6rem;}
-  .shopCont {padding-top: 18rem;}
+  .storeSmallText {
+    font-size: 1.5rem;
+  }
+
+  .storeSmallBtn {
+    width: 50%;
+  }
 }

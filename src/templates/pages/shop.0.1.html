@@ -1,0 +1,40 @@
+{% extends "pages/base.html" %}
+
+{% block content %}
+
+{% include "pages/navs/topNav.html" %}
+
+{% include "pages/navs/sideNav.html" %}
+
+
+  <div class="storeContainer">
+
+    <div id="trigger"></div>
+
+    <img class="storeBig" src="{{ shop.print1.s3Key | image({h: 1200, w: 1200}) }}"/>
+
+    <div class="storeSmall">
+
+      <img class="storeSmallImg" src="{{ shop.print1.s3Key | image({h: 300, w: 300}) }}"/>
+
+      <div class="storeSmallText" >
+        <div class="">P.FARO  SQUID INK PRINT I</div>
+
+        <div>Giclée Print, Matte 230 gsm</div>
+        <div>Signed and numbered by Artist</div>
+        <div>Size 11" x 17"</div>
+        <div>Edition: 50</div>
+        <div>Free shipping within NYC</div>
+        <div>$50.00</div>
+
+      </div>
+
+      <div class="storeSmallBtn" >
+        Shop
+      </div>
+
+    </div>
+
+  </div>
+
+{% endblock %}
