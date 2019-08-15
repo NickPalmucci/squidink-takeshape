@@ -1,8 +1,6 @@
 @import './normalize.css';
 @import './skeleton.css';
 @import './topMenu.css';
-@import './sideMenu.css';
-@import './mobileMenu.css';
 @import './store.css';
 
 @font-face {
@@ -16,20 +14,6 @@
   min-height: 100px;
   width: 100%;
   margin-bottom: 1rem;
-}
-
-.logoContainer {
-  display: flex;
-  flex-direction: column;
-  margin: 1rem 0;
-  align-items: center;
-}
-
-.logo {
-  align-self: center;
-  cursor: pointer;
-  height: 15rem;
-  width: 15rem;
 }
 
 .scrollmagic-pin-spacer {

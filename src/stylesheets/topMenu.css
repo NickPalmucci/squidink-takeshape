@@ -1,27 +1,24 @@
 .logoMenu {
   display: flex;
   flex-direction: row;
-  visibility: hidden;
   position: relative;
-  margin-top: 2.5rem;
+  margin-top: 0.5rem;
   color: white;
-  height: 0;
-  transition: height ease 1s;
 }
 
 @media (min-width: 2500px) {
   .logoMenu > a > svg {
-    height: 10rem;
-    width: 12rem;
+
   }
 }
 
-.activeTop {
-  visibility: visible;
-  height: 6rem;
-  color: black;
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+  align-items: center;
 }
 
-.activeTop > h1 {
-  opacity: 1;
+.logo {
+  align-self: center;
 }
